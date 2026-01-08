@@ -647,3 +647,30 @@ body.no-scroll {
         flex-direction: column;
     }
 }
+
+/* Botón WhatsApp Fijo */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366; /* Color oficial WhatsApp */
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    background-color: #20bd5a;
+    box-shadow: 2px 6px 15px rgba(0,0,0,0.4);
+    color: white; /* Asegurar que el icono siga blanco */
+}
