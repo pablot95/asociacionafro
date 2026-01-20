@@ -35,41 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     
-    // Funcionalidad de filtrado para la galería de eventos
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const galleryItems = document.querySelectorAll('.gallery-item');
-
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Remover clase active de todos los botones
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            // Agregar clase active al botón clickeado
-            button.classList.add('active');
-
-            const filterValue = button.getAttribute('data-filter');
-
-            galleryItems.forEach(item => {
-                const itemCategory = item.getAttribute('data-category');
-
-                if (filterValue === 'all' || filterValue === itemCategory) {
-                    item.classList.remove('hide');
-                    item.style.display = 'block'; // Asegura visualización correcta
-                    // Pequeña animación de entrada
-                    item.animate([
-                        { opacity: 0, transform: 'scale(0.9)' },
-                        { opacity: 1, transform: 'scale(1)' }
-                    ], {
-                        duration: 300,
-                        fill: 'forwards'
-                    });
-                } else {
-                    item.classList.add('hide');
-                    item.style.display = 'none'; // Oculta del flujo
-                }
-            });
-        });
-    });
-
+    
     // Desplazamiento suave para los enlaces de navegación (opcional si CSS scroll-behavior no es suficiente)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -99,31 +65,33 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // --- Video Interaction (Click to Unmute) ---
-    const videoContainers = document.querySelectorAll('.gallery-item.video-item .img-container');
-    
-    videoContainers.forEach(container => {
-        container.addEventListener('click', () => {
-            const video = container.querySelector('video');
-            const icon = container.querySelector('.text i');
+    // --- Media Scroller Horizontal Buttons ---
+    const scrollers = document.querySelectorAll('.scroller-container');
+
+    scrollers.forEach(container => {
+        const scroller = container.querySelector('.media-scroller');
+        const leftBtn = container.querySelector('.scroll-btn.left');
+        const rightBtn = container.querySelector('.scroll-btn.right');
+        
+        // Distancia a scrollear (ancho de tarjeta + gap)
+        const scrollAmount = 315; 
+
+        if(leftBtn && rightBtn && scroller) {
             
-            if (video) {
-                video.muted = !video.muted;
-                
-                if (video.muted) {
-                    // Muted
-                    if(icon) {
-                        icon.classList.remove('fa-volume-up');
-                        icon.classList.add('fa-volume-mute');
-                    }
-                } else {
-                    // Unmuted
-                    if(icon) {
-                        icon.classList.remove('fa-volume-mute');
-                        icon.classList.add('fa-volume-up');
-                    }
-                }
-            }
-        });
+            leftBtn.addEventListener('click', () => {
+                scroller.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+
+            rightBtn.addEventListener('click', () => {
+                scroller.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+        }
     });
+
 });

@@ -41,6 +41,31 @@
         <a href="#contacto" class="btn btn-primary">Únete a la lucha</a>
     </div>
 
+    <!-- Sección Mestre (Nueva) -->
+    <section id="mestre-intro" class="section-padding" style="background-color: #f8f8f8; border-bottom: 4px solid var(--yellow);">
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px;">
+                <div class="mestre-img animate-on-scroll fade-right" style="flex: 1; min-width: 300px; max-width: 400px;">
+                    <img src="images/mestre.jpeg" alt="Mestre André" style="width: 100%; border-radius: 10px; box-shadow: 10px 10px 0 var(--green);">
+                </div>
+                <div class="mestre-info animate-on-scroll fade-left" style="flex: 1; min-width: 300px;">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 10px; color: var(--black); line-height: 1.1;">
+                        MESTRE ALABÉ ANDRÉ DO TIMBAU<br>
+                        <span style="font-size: 1.2rem; color: var(--red); display: block; margin-top: 10px;">LUTHIER DE PERCUSIÓN AFRO <i class="fas fa-flag" style="color: #009c3b; margin-left: 10px;"></i> <i class="fas fa-flag" style="color: #ffdf00;"></i></span>
+                    </h2>
+                    <div class="linea-deco" style="margin: 20px 0;"></div>
+                    <p class="lead" style="font-size: 1.3rem; margin-bottom: 25px;">
+                        Mestre es el dueño de la escuela y el precursor de esta asociación.
+                    </p>
+                    <p style="margin-bottom: 30px;">
+                        Con una trayectoria dedicada a la preservación y difusión de la cultura afro-brasileña, Mestre André lidera este movimiento cultural, formando percusionistas y construyendo instrumentos con sus propias manos.
+                    </p>
+                    <a href="#clases" class="btn btn-primary">Ver Escuela de Percusión</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Sección Nosotros y Objetivos -->
     <section id="nosotros" class="section-padding">
         <div class="container">
@@ -104,28 +129,28 @@
                     <div class="instrument-list">
                         <h4>Instrumentos que aprenderás:</h4>
                         <div class="instruments-grid">
-                            <div class="inst-item animate-on-scroll zoom-in delay-100">
-                                <i class="fas fa-drum"></i>
+                            <div class="inst-item animate-on-scroll zoom-in delay-100" style="flex-direction: column; text-align: center; padding: 10px;">
+                                <img src="images/atabaque.jpeg" alt="Atabaque" style="width: 100%; height: 300px; object-fit: cover; border-radius: 5px; margin-bottom: 10px;">
                                 <span><strong>Atabaque:</strong> El tambor sagrado de madera y cuero.</span>
                             </div>
-                            <div class="inst-item animate-on-scroll zoom-in delay-200">
-                                <i class="fas fa-music"></i>
+                            <div class="inst-item animate-on-scroll zoom-in delay-150" style="flex-direction: column; text-align: center; padding: 10px;">
+                                <img src="images/congas.jpeg" alt="Congas" style="width: 100%; height: 300px; object-fit: cover; border-radius: 5px; margin-bottom: 10px;">
+                                <span><strong>Congas:</strong> Fuerza y técnica manual.</span>
+                            </div>
+                            <div class="inst-item animate-on-scroll zoom-in delay-200" style="flex-direction: column; text-align: center; padding: 10px;">
+                                <img src="images/surdo.jpeg" alt="Surdo" style="width: 100%; height: 300px; object-fit: cover; border-radius: 5px; margin-bottom: 10px;">
                                 <span><strong>Surdo:</strong> El corazón grave de la batucada.</span>
                             </div>
-                            <div class="inst-item animate-on-scroll zoom-in delay-300">
-                                <i class="fas fa-hand-rock"></i>
+                            <div class="inst-item animate-on-scroll zoom-in delay-300" style="flex-direction: column; text-align: center; padding: 10px;">
+                                <img src="images/timbal.jpeg" alt="Timbal" style="width: 100%; height: 300px; object-fit: cover; border-radius: 5px; margin-bottom: 10px;">
                                 <span><strong>Timbal Bahiano:</strong> Ritmos agudos y potentes.</span>
                             </div>
-                            <div class="inst-item animate-on-scroll zoom-in delay-400">
-                                <i class="fas fa-bolt"></i>
+                            <div class="inst-item animate-on-scroll zoom-in delay-400" style="flex-direction: column; text-align: center; padding: 10px;">
+                                <img src="images/repique.jpeg" alt="Repinique" style="width: 100%; height: 300px; object-fit: cover; border-radius: 5px; margin-bottom: 10px;">
                                 <span><strong>Repinique:</strong> El llamado que dirige la orquesta.</span>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="instructor-img animate-on-scroll fade-right">
-                    <!-- Placeholder para foto de Andre o instrumentos -->
-                    <img src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Clase de Percusión">
                 </div>
             </div>
 
@@ -142,199 +167,188 @@
         </div>
     </section>
 
-    <!-- Sección Eventos (Galería Filtrable) -->
+    <!-- Sección Eventos (Carrusel) -->
     <section id="eventos" class="section-padding">
         <div class="container">
             <div class="section-title animate-on-scroll fade-up">
-                <h2>Galería de Eventos</h2>
+                <h2>Eventos y Noticias</h2>
                 <div class="linea-deco"></div>
             </div>
 
-            <div class="gallery-controls animate-on-scroll fade-up">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="07-05">Evento 7/5</button>
-                <button class="filter-btn" data-filter="10-06">Evento 10/6</button>
-                <button class="filter-btn" data-filter="15-08">Evento 15/8</button>
-                <button class="filter-btn" data-filter="20-11">Evento 20/11</button>
-            </div>
-
-            <div class="gallery-grid">
-                <!-- Evento 7/5 -->
-                <div class="gallery-item animate-on-scroll zoom-in" data-category="07-05">
-                    <div class="img-container">
-                        <img src="danza.jpg" alt="Evento danza">
-                        <div class="overlay">
-                            <div class="text">Clase Abierta</div>
-                        </div>
-                    </div>
-                    <div class="event-desc">
-                        <h4>7 de Mayo</h4>
-                        <p>Inicio del ciclo de talleres con gran concurrencia. La comunidad se reunió para compartir los primeros pasos en la danza afro, conectando con ritmos ancestrales en un ambiente de aprendizaje y alegría.</p>
-                    </div>
-                </div>
-                <!-- Evento 10/6 -->
-                <div class="gallery-item animate-on-scroll zoom-in delay-100" data-category="10-06">
-                    <div class="img-container">
-                        <img src="bombos.jpg" alt="Evento Tambores">
-                        <div class="overlay">
-                            <div class="text">Ensamble</div>
-                        </div>
-                    </div>
-                    <div class="event-desc">
-                        <h4>10 de Junio</h4>
-                        <p>Encuentro de percusión regional con invitados especiales. Se exploraron ritmos de diversas regiones, fusionando técnicas tradicionales con estilos contemporáneos en una jornada vibrante llena de energía.</p>
-                    </div>
-                </div>
-                 <!-- Evento 7/5 -->
-                 <div class="gallery-item video-item animate-on-scroll zoom-in delay-200" data-category="07-05">
-                    <div class="img-container video-container-inner">
-                        <video src="videopercusion1.mp4" autoplay loop muted playsinline class="gallery-video"></video>
-                        <div class="overlay">
-                            <div class="text">Video Taller <i class="fas fa-volume-mute"></i></div>
-                        </div>
-                    </div>
-                    <div class="event-desc">
-                        <h4>7 de Mayo</h4>
-                        <p>Momentos destacados de la jornada de apertura. Un resumen visual que captura la energía y el entusiasmo desbordante de los participantes durante la primera clase abierta del año.</p>
-                    </div>
-                </div>
-                 <!-- Evento 10/6 -->
-                 <div class="gallery-item animate-on-scroll zoom-in delay-300" data-category="10-06">
-                    <div class="img-container">
-                        <img src="danzapies.jpg" alt="Detalle Danza">
-                        <div class="overlay">
-                            <div class="text">Pies Descalzos</div>
-                        </div>
-                    </div>
-                     <div class="event-desc">
-                        <h4>10 de Junio</h4>
-                        <p>Conexión con la tierra a través de la danza descalza. Sentir el suelo es fundamental para esta disciplina, permitiendo que la energía fluya desde las raíces hasta el movimiento corporal, fortaleciendo el alma.</p>
-                    </div>
-                </div>
-                 <!-- Evento 10/6 (Video 2) -->
-                 <div class="gallery-item video-item animate-on-scroll zoom-in delay-200" data-category="10-06">
-                    <div class="img-container video-container-inner">
-                        <video src="videopercusion2.mp4" autoplay loop muted playsinline class="gallery-video"></video>
-                        <div class="overlay">
-                            <div class="text">Ritmo 10/6 <i class="fas fa-volume-mute"></i></div>
-                        </div>
-                    </div>
-                    <div class="event-desc">
-                        <h4>10 de Junio</h4>
-                        <p>Práctica intensiva de nuevos ritmos complejos. Los alumnos avanzados demostraron su destreza y coordinación en una sesión desafiante dirigida por el maestro André.</p>
-                    </div>
-                </div>
-
-                <!-- Evento 15/8 (Video Cantando 1) -->
-                <div class="gallery-item video-item animate-on-scroll zoom-in delay-100" data-category="15-08">
-                    <div class="img-container video-container-inner">
-                        <video src="videocantando1.mp4" autoplay loop muted playsinline class="gallery-video"></video>
-                        <div class="overlay">
-                            <div class="text">Canto Colectivo <i class="fas fa-volume-mute"></i></div>
-                        </div>
-                    </div>
-                    <div class="event-desc">
-                        <h4>15 de Agosto</h4>
-                        <p>Cantos tradicionales en ronda. Las voces se unieron en armonía para entonar canciones que narran historias de nuestros antepasados, preservando la tradición oral.</p>
-                    </div>
-                </div>
+            <div class="events-container">
                 
-
-                <!-- Evento 20/11 (Video Cantando 2) -->
-                <div class="gallery-item video-item animate-on-scroll zoom-in delay-200" data-category="20-11">
-                    <div class="img-container video-container-inner">
-                        <video src="videocantando2.mp4" autoplay loop muted playsinline class="gallery-video"></video>
-                        <div class="overlay">
-                            <div class="text">Memoria Viva <i class="fas fa-volume-mute"></i></div>
+                <!-- Evento 1: Roda de Timbau de Ramiro -->
+                <article class="event-row animate-on-scroll fade-up">
+                    <div class="event-info">
+                        <h3>Roda de Timbau de Ramiro</h3>
+                        <span class="date">Domingo 30/11</span>
+                        <div class="event-desc">
+                            <p>Una jornada vibrante donde los ritmos del Timbau tomaron el protagonismo. Compartimos energía, aprendimos nuevas técnicas y celebramos la percusión en comunidad con la presencia especial de Ramiro.</p>
                         </div>
                     </div>
-                    <div class="event-desc">
-                        <h4>20 de Noviembre</h4>
-                        <p>Cierre emotivo con cánticos de resistencia. La jornada culminó con una poderosa demostración vocal que resonó con fuerza, simbolizando la unidad y el orgullo de nuestra identidad.</p>
+                    
+                    <div class="scroller-container">
+                        <button class="scroll-btn left"><i class="fas fa-chevron-left"></i></button>
+                        <div class="media-scroller">
+                            <div class="media-element">
+                                <img src="images/eventorodapresentacion.jpeg" alt="Roda de Timbau Presentación">
+                            </div>
+                            <div class="media-element">
+                                <img src="images/eventoroda2.jpeg" alt="Roda de Timbau Foto 2">
+                            </div>
+                            <div class="media-element">
+                                <video src="images/eventoroda1.mp4" controls playsinline loop muted></video>
+                            </div>
+                            <div class="media-element">
+                                <video src="images/eventoroda3.mp4" controls playsinline loop muted></video>
+                            </div>
+                            <div class="media-element">
+                                <video src="images/eventoroda4.mp4" controls playsinline loop muted></video>
+                            </div>
+                        </div>
+                        <button class="scroll-btn right"><i class="fas fa-chevron-right"></i></button>
                     </div>
-                </div>
+                </article>
+
+                <!-- Evento 2: Homenaje a María Remedios del Valle -->
+                <article class="event-row animate-on-scroll fade-up">
+                    <div class="event-info">
+                        <h3>Homenaje a María Remedios del Valle</h3>
+                        <p style="font-weight: bold; color: var(--green);">Capitana de los Ejércitos del Sur</p>
+                        <span class="date">Honorable Consejo Deliberante de Merlo</span>
+                        <div class="event-desc">
+                            <p>Participamos con orgullo en el homenaje a la "Madre de la Patria". Un acto solemne donde recordamos su valentía y lucha por la independencia, reivindicando el papel fundamental de los afrodescendientes en nuestra historia.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="scroller-container">
+                        <button class="scroll-btn left"><i class="fas fa-chevron-left"></i></button>
+                        <div class="media-scroller">
+                            <div class="media-element">
+                                <img src="images/remedios.jpeg" alt="María Remedios del Valle">
+                            </div>
+                            <div class="media-element">
+                                <img src="images/eventohomenaje.jpeg" alt="Homenaje Foto 1">
+                            </div>
+                            <div class="media-element">
+                                <img src="images/eventohomenaje2.jpeg" alt="Homenaje Foto 2">
+                            </div>
+                            <div class="media-element">
+                                <img src="images/eventohomenaje3.jpeg" alt="Homenaje Foto 3">
+                            </div>
+                            <div class="media-element">
+                                <img src="images/eventohomenaje4.jpeg" alt="Homenaje Foto 4">
+                            </div>
+                        </div>
+                        <button class="scroll-btn right"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </article>
+
+                <!-- Evento 3: Mestre Neguinho do Samba -->
+                <article class="event-row animate-on-scroll fade-up">
+                    <div class="event-info">
+                        <h3>Paso a la Inmortalidad de Mestre Neguinho do Samba</h3>
+                        <span class="date">31/10 - Día del Samba Reggae</span>
+                        <div class="event-desc">
+                            <p>En este día especial, rendimos tributo al creador del Samba Reggae. Su legado vive en cada toque de tambor y en la alegría de nuestra música. Mestre Neguinho do Samba, ¡presente!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="scroller-container">
+                        <button class="scroll-btn left"><i class="fas fa-chevron-left"></i></button>
+                        <div class="media-scroller">
+                            <div class="media-element">
+                                <img src="images/mestreneguinho.jpeg" alt="Mestre Neguinho do Samba">
+                            </div>
+                            <div class="media-element">
+                                <img src="images/eventomestre1.jpeg" alt="Tributo Neguinho 1">
+                            </div>
+                            <div class="media-element">
+                                <img src="images/eventomestre2.jpeg" alt="Tributo Neguinho 2">
+                            </div>
+                            <div class="media-element">
+                                <img src="images/eventomestre3.jpeg" alt="Tributo Neguinho 3">
+                            </div>
+                            <div class="media-element">
+                                <img src="images/eventomestre4.jpeg" alt="Tributo Neguinho 4">
+                            </div>
+                        </div>
+                        <button class="scroll-btn right"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </article>
+
             </div>
         </div>
     </section>
 
-    <!-- Sección Noticias y Efemérides -->
-    <section id="noticias" class="section-dark section-padding">
-        <div class="container">
-            <div class="section-title animate-on-scroll fade-right">
-                <h2>Cultura y Noticias</h2>
-                <div class="linea-deco"></div>
-            </div>
-            
-            <div class="news-card featured animate-on-scroll fade-left">
-                <img src="remedios.jpg" alt="María Remedios del Valle" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 3px solid var(--yellow); margin-right: 20px;">
-                <div class="news-date">
-                    <span class="day">08</span>
-                    <span class="month">NOV</span>
-                </div>
-                <div class="news-content">
-                    <h3>Día Nacional de los/as Afroargentinos/as</h3>
-                    <h4>En honor a María Remedios del Valle</h4>
-                    <p>Conocida como la "Madre de la Patria", María remedios del Valle luchó heroicamente en las guerras de Independencia. El 8 de noviembre conmemoramos su fallecimiento y celebramos la cultura afro en nuestro país, reivindicando nuestra historia y aportes a la identidad nacional.</p>
-                </div>
-            </div>
-
-            <div class="news-card animate-on-scroll fade-left" style="margin-top: 30px; border-left-color: var(--green);">
-                <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Mujer Afrolatina" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 3px solid var(--green); margin-right: 20px;">
-                <div class="news-date" style="border-color: var(--green);">
-                    <span class="day animate-on-scroll zoom-in" style="color: var(--white);">25</span>
-                    <span class="month">JUL</span>
-                </div>
-                <div class="news-content">
-                    <h3>Día de la Mujer Afrolatina</h3>
-                    <h4>Afrocaribeña y de la Diáspora</h4>
-                    <p>Homenajeamos la fuerza y resiliencia de las mujeres afrodescendientes. Una jornada para visibilizar sus aportes históricos, luchar contra el racismo y sexismo, y promover políticas públicas inclusivas que garanticen sus derechos plenos.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Luthier y Patrocinadores -->
+    <!-- Sección Luthier / Antes y Después -->
     <section id="luthier" class="section-padding">
         <div class="container">
             <div class="section-title animate-on-scroll fade-up">
-                <h2>Taller del Luthier & Patrocinadores</h2>
-                <p>Instrumentos refaccionados y productos de nuestra comunidad</p>
+                <h2>Taller del Luthier</h2>
+                <p>Restauración y Creación de Instrumentos</p>
                 <div class="linea-deco"></div>
             </div>
 
             <div class="shop-grid">
-                <!-- Producto Luthier 1 -->
+                
+                <!-- Restauración 1: Agogos -->
                 <div class="shop-card luthier-card animate-on-scroll zoom-in">
-                    <div class="badge">Refaccionado</div>
-                    <img src="atabaque.jpg" alt="Tambor">
+                    <h3>Restauración de Agogós</h3>
+                    <div class="before-after-container">
+                        <div class="ba-item">
+                            <img src="images/antesagogos.jpeg" alt="Agogós Antes">
+                            <span class="ba-label">ANTES</span>
+                        </div>
+                        <div class="ba-item">
+                            <img src="images/despuesagogos.jpeg" alt="Agogós Después">
+                            <span class="ba-label" style="background: var(--green);">DESPUÉS</span>
+                        </div>
+                    </div>
                     <div class="card-body">
-                        <h3>Atabaque Restaurado</h3>
-                        <p>Madera tratada, parche nuevo de cabra. Sonido profundo.</p>
+                        <p>Recuperación de brillo y afinación. Tratamiento anticorrosivo.</p>
                         <button class="btn btn-secondary">Consultar</button>
                     </div>
                 </div>
-                <!-- Producto Luthier 2 -->
+
+                <!-- Restauración 2: Repinique -->
                 <div class="shop-card luthier-card animate-on-scroll zoom-in delay-100">
-                    <div class="badge">Refaccionado</div>
-                    <img src="agogoset.jpg" alt="Agogo">
+                    <h3>Restauración de Repinique</h3>
+                    <div class="before-after-container">
+                        <div class="ba-item">
+                            <img src="images/antesrepinique.jpeg" alt="Repinique Antes">
+                            <span class="ba-label">ANTES</span>
+                        </div>
+                        <div class="ba-item">
+                            <img src="images/despuesrepinique.jpeg" alt="Repinique Después">
+                            <span class="ba-label" style="background: var(--green);">DESPUÉS</span>
+                        </div>
+                    </div>
                     <div class="card-body">
-                        <h3>Set de Percusión</h3>
-                        <p>Incluye Agogó y baquetas artesanales.</p>
+                        <p>Cambio de parches y aros. Ajuste de tensores y pintura nueva.</p>
                         <button class="btn btn-secondary">Consultar</button>
                     </div>
                 </div>
-                <!-- Patrocinador -->
-                <div class="shop-card sponsor-card animate-on-scroll zoom-in delay-200">
-                    <div class="badge sponsor">Patrocinador</div>
-                    <div class="sponsor-placeholder">
-                        <i class="fas fa-tshirt"></i>
+
+                <!-- Restauración 3: Tumbadora -->
+                <div class="shop-card luthier-card animate-on-scroll zoom-in delay-200">
+                    <h3>Restauración de Tumbadora</h3>
+                    <div class="before-after-container">
+                        <div class="ba-item">
+                            <img src="images/antestumbadora.jpeg" alt="Tumbadora Antes">
+                            <span class="ba-label">ANTES</span>
+                        </div>
+                        <div class="ba-item">
+                            <img src="images/despuestumbadora.jpeg" alt="Tumbadora Después">
+                            <span class="ba-label" style="background: var(--green);">DESPUÉS</span>
+                        </div>
                     </div>
                     <div class="card-body">
-                        <h3>Ropa Afro Style</h3>
-                        <p>Indumentaria tradicional y moderna.</p>
-                        <a href="#" class="link">Visitar Sitio</a>
+                        <p>Tratamiento de madera, laqueado y cuero de primera calidad.</p>
+                        <button class="btn btn-secondary">Consultar</button>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
