@@ -100,22 +100,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const musicIcon = musicBtn ? musicBtn.querySelector('i') : null;
 
     if (musicBtn && bgMusic) {
-        // Intentar reproducir automáticamente (puede ser bloqueado por el navegador)
-        const playPromise = bgMusic.play();
-        
-        if (playPromise !== undefined) {
-            playPromise.then(_ => {
-                // Autoplay started
-                musicBtn.classList.add('playing');
-                if(musicIcon) {
-                    musicIcon.classList.remove('fa-play');
-                    musicIcon.classList.add('fa-pause');
-                }
-            }).catch(error => {
-                // Autoplay was prevented
-                console.log("Autoplay prevenido. Usuario debe interactuar.");
-            });
-        }
+        // Intentar reproducir automáticamente después de 3 segundos
+        setTimeout(() => {
+            const playPromise = bgMusic.play();
+            
+            if (playPromise !== undefined) {
+                playPromise.then(_ => {
+                    // Autoplay started
+                    musicBtn.classList.add('playing');
+                    if(musicIcon) {
+                        musicIcon.classList.remove('fa-play');
+                        musicIcon.classList.add('fa-pause');
+                    }
+                }).catch(error => {
+                    // Autoplay was prevented
+                    console.log("Autoplay prevenido. Usuario debe interactuar.");
+                });
+            }
+        }, 3000);
 
         musicBtn.addEventListener('click', () => {
             if (bgMusic.paused) {
