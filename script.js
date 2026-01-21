@@ -94,4 +94,46 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // --- Reproductor de Música ---
+    const musicBtn = document.getElementById('music-btn');
+    const bgMusic = document.getElementById('bg-music');
+    const musicIcon = musicBtn ? musicBtn.querySelector('i') : null;
+
+    if (musicBtn && bgMusic) {
+        // Intentar reproducir automáticamente (puede ser bloqueado por el navegador)
+        const playPromise = bgMusic.play();
+        
+        if (playPromise !== undefined) {
+            playPromise.then(_ => {
+                // Autoplay started
+                musicBtn.classList.add('playing');
+                if(musicIcon) {
+                    musicIcon.classList.remove('fa-play');
+                    musicIcon.classList.add('fa-pause');
+                }
+            }).catch(error => {
+                // Autoplay was prevented
+                console.log("Autoplay prevenido. Usuario debe interactuar.");
+            });
+        }
+
+        musicBtn.addEventListener('click', () => {
+            if (bgMusic.paused) {
+                bgMusic.play();
+                musicBtn.classList.add('playing');
+                if(musicIcon) {
+                    musicIcon.classList.remove('fa-play');
+                    musicIcon.classList.add('fa-pause');
+                }
+            } else {
+                bgMusic.pause();
+                musicBtn.classList.remove('playing');
+                if(musicIcon) {
+                    musicIcon.classList.remove('fa-pause');
+                    musicIcon.classList.add('fa-play');
+                }
+            }
+        });
+    }
+
 });
