@@ -304,6 +304,7 @@ body.no-scroll {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: 40px;
     margin-bottom: 50px;
 }
@@ -323,9 +324,15 @@ body.no-scroll {
 
 .instruments-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
     margin-top: 20px;
+}
+
+@media (max-width: 1024px) {
+    .instruments-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
 }
 
 .inst-item {
