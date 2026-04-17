@@ -1,11 +1,9 @@
-/* --- Animate on Scroll Classes --- */
-.animate-on-scroll {
+﻿.animate-on-scroll {
     opacity: 0;
     will-change: opacity, transform;
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-/* Tipos de animaciones de entrada */
 .fade-up {
     transform: translateY(30px);
 }
@@ -26,13 +24,11 @@
     transform: rotate(-10deg) scale(0.9);
 }
 
-/* Estado Visible */
 .animate-on-scroll.is-visible {
     opacity: 1;
     transform: none;
 }
 
-/* Delays para efecto cascada */
 .delay-100 { transition-delay: 0.1s; }
 .delay-200 { transition-delay: 0.2s; }
 .delay-300 { transition-delay: 0.3s; }

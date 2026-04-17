@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     --black: #121212;
     --dark-grey: #1e1e1e;
     --green: #2ecc71;
@@ -6,7 +6,7 @@
     --yellow: #f1c40f;
     --white: #ecf0f1;
     --text-grey: #bdc3c7;
-    --cream: #f4f1ea; /* Fondo claro */
+    --cream: #f4f1ea;
     --text-dark: #333333;
 }
 
@@ -21,6 +21,10 @@ body {
     background-color: var(--cream);
     color: var(--text-dark);
     line-height: 1.6;
+}
+
+body.no-scroll {
+    overflow: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -61,7 +65,6 @@ ul {
     color: var(--white);
 }
 
-/* --- Botones --- */
 .btn {
     display: inline-block;
     padding: 12px 30px;
@@ -90,11 +93,10 @@ ul {
     border-bottom: 4px solid #f39c12;
 }
 
-/* --- Header --- */
 header {
     background-color: rgba(0,0,0,0.9);
     position: fixed;
-    top: -100px; /* Oculto inicialmente */
+    top: -100px;
     width: 100%;
     z-index: 1000;
     border-bottom: 3px solid;
@@ -131,7 +133,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: var(--white); /* Texto blanco para que se vea sobre el header negro */
+    color: var(--white);
     font-weight: bold;
 }
 
@@ -139,11 +141,6 @@ nav ul li a:hover {
     color: var(--green);
 }
 
-body.no-scroll {
-    overflow: hidden;
-}
-
-/* --- Hero --- */
 .hero {
     height: 100vh;
     width: 100%;
@@ -170,8 +167,6 @@ body.no-scroll {
 .hero-images.active {
     transform: scale(1);
 }
-
-
 
 .hero-cta {
     text-align: center;
@@ -200,7 +195,6 @@ body.no-scroll {
     color: var(--green);
 }
 
-/* --- Secciones Generales --- */
 .section-title {
     text-align: center;
     margin-bottom: 50px;
@@ -208,11 +202,11 @@ body.no-scroll {
 
 .section-title h2 {
     font-size: 2rem;
-    color: var(--black); /* Color por defecto oscuro para secciones claras */
+    color: var(--black);
 }
 
 .section-dark .section-title h2 {
-    color: var(--white); /* Excepción para secciones oscuras */
+    color: var(--white);
 }
 
 .linea-deco {
@@ -222,7 +216,6 @@ body.no-scroll {
     margin: 15px auto;
 }
 
-/* --- Nosotros --- */
 .about-text {
     max-width: 800px;
     margin: 0 auto 50px;
@@ -264,6 +257,7 @@ body.no-scroll {
     color: var(--red);
     margin-bottom: 15px;
 }
+
 .obj-card h3 {
     color: var(--yellow);
     margin-bottom: 15px;
@@ -299,7 +293,6 @@ body.no-scroll {
     margin-right: 15px;
 }
 
-/* --- Clases --- */
 .instructor-profile {
     display: flex;
     flex-wrap: wrap;
@@ -308,9 +301,6 @@ body.no-scroll {
     gap: 40px;
     margin-bottom: 50px;
 }
-
-
-
 
 .instructor-img {
     flex: 1;
@@ -329,12 +319,6 @@ body.no-scroll {
     margin-top: 20px;
 }
 
-@media (max-width: 1024px) {
-    .instruments-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-}
-
 .inst-item {
     background: var(--black);
     padding: 15px;
@@ -343,7 +327,6 @@ body.no-scroll {
     align-items: center;
     gap: 10px;
 }
-
 
 .inst-item i {
     font-size: 1.5rem;
@@ -367,21 +350,19 @@ body.no-scroll {
     font-size: 0.9rem;
 }
 
-/* --- Eventos (Nuevo Diseño Vertical con Carrusel) --- */
 .events-container {
     display: flex;
     flex-direction: column;
-    gap: 80px; /* Separación entre eventos */
+    gap: 80px;
 }
 
 .event-row {
     background: var(--white);
     padding: 30px;
-    border-left: 6px solid var(--green); /* Color por defecto */
+    border-left: 6px solid var(--green);
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 
-/* Colores de borde alternados o específicos si se desea */
 .event-row:nth-child(2) { border-left-color: var(--yellow); }
 .event-row:nth-child(3) { border-left-color: var(--red); }
 
@@ -414,7 +395,6 @@ body.no-scroll {
     margin: 0 auto;
 }
 
-/* --- Scroller Horizontal con Flechas --- */
 .scroller-container {
     position: relative;
     max-width: 100%;
@@ -427,12 +407,11 @@ body.no-scroll {
     padding: 10px 0 20px 0;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     scroll-behavior: smooth;
 }
 
-/* Ocultar scrollbar webkit */
 .media-scroller::-webkit-scrollbar {
     display: none;
 }
@@ -458,10 +437,9 @@ body.no-scroll {
 
 .media-element:hover img,
 .media-element:hover video {
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
-/* Botones de navegación (flechas) */
 .scroll-btn {
     position: absolute;
     top: 50%;
@@ -479,7 +457,7 @@ body.no-scroll {
     align-items: center;
     font-size: 1.5rem;
     transition: 0.3s;
-    opacity: 0; /* Oculto por defecto hasta hover del container */
+    opacity: 0;
 }
 
 .scroller-container:hover .scroll-btn {
@@ -494,8 +472,6 @@ body.no-scroll {
 .scroll-btn.left { left: 10px; }
 .scroll-btn.right { right: 10px; }
 
-
-/* --- Luthier / Antes y Después --- */
 .shop-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -548,7 +524,6 @@ body.no-scroll {
     font-weight: bold;
 }
 
-/* --- Footer --- */
 .footer-section {
     background-color: #000;
     border-top: 5px solid var(--red);
@@ -566,6 +541,7 @@ body.no-scroll {
     color: var(--yellow);
     margin-bottom: 20px;
 }
+
 .footer-col p, .footer-col li {
     color: white;
     margin-bottom: 10px;
@@ -594,61 +570,11 @@ body.no-scroll {
     font-size: 0.9rem;
 }
 
-/* --- Responsive --- */
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-    }
-    nav ul {
-        margin-top: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    nav ul li {
-        margin: 5px 10px;
-    }
-    .hero-content h2 {
-        font-size: 2.5rem;
-    }
-    .instructor-profile {
-        flex-direction: column;
-    }
-
-    /* --- Eventos Mobile: Grid 2 columnas --- */
-    .media-scroller {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
-        overflow-x: visible;
-        padding-bottom: 0;
-        scroll-snap-type: none;
-    }
-
-    .media-element {
-        width: 100%;
-        height: 200px; /* Altura ajustada para grid */
-        flex: none;
-    }
-
-    .scroll-btn {
-        display: none !important; /* Ocultar flechas en móvil */
-    }
-
-    .event-row {
-        padding: 15px 5px; /* Menos padding para ganar espacio */
-    }
-    
-    .container {
-        padding: 0 10px; /* Aprovechar ancho de pantalla */
-    }
-}
-
-/* Botón WhatsApp Fijo */
 .whatsapp-btn {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: #25d366; /* Color oficial WhatsApp */
+    background-color: #25d366;
     color: white;
     width: 60px;
     height: 60px;
@@ -667,10 +593,9 @@ body.no-scroll {
     transform: scale(1.1);
     background-color: #20bd5a;
     box-shadow: 2px 6px 15px rgba(0,0,0,0.4);
-    color: white; /* Asegurar que el icono siga blanco */
+    color: white;
 }
 
-/* --- Reproductor de Música Flotante --- */
 .music-player-container {
     position: fixed;
     bottom: 30px;
@@ -713,4 +638,52 @@ body.no-scroll {
     0% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7); }
     70% { box-shadow: 0 0 0 15px rgba(46, 204, 113, 0); }
     100% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
+}
+
+@media (max-width: 1024px) {
+    .instruments-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav ul li {
+        margin: 5px 10px;
+    }
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+    .instructor-profile {
+        flex-direction: column;
+    }
+    .media-scroller {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        overflow-x: visible;
+        padding-bottom: 0;
+        scroll-snap-type: none;
+    }
+    .media-element {
+        width: 100%;
+        height: 200px;
+        flex: none;
+    }
+    .scroll-btn {
+        display: none !important;
+    }
+    .event-row {
+        padding: 15px 5px;
+    }
+    .container {
+        padding: 0 10px;
+    }
 }

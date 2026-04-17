@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -6,13 +6,90 @@
     <title>Os Guerreiros do Axe Afro | Movimiento Cultural</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="animations.css">
-    <!-- Fuente de Google para estilo moderno -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .construccion-page {
+            min-height: 100vh;
+            background: #111;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .construccion-page img.logo-construccion {
+            width: 120px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        .construccion-page h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+        }
+        .construccion-page h1 span {
+            color: #f1c40f;
+        }
+        .construccion-page p {
+            color: #ccc;
+            font-size: 1.1rem;
+            max-width: 500px;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+        .construccion-page .linea-amarilla {
+            width: 80px;
+            height: 4px;
+            background: #f1c40f;
+            margin: 20px auto 30px;
+            border-radius: 2px;
+        }
+        .construccion-page .icon-construccion {
+            font-size: 4rem;
+            color: #f1c40f;
+            margin-bottom: 20px;
+            animation: spin-slow 6s linear infinite;
+        }
+        @keyframes spin-slow {
+            0%   { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .construccion-page .social-links a {
+            color: #f1c40f;
+            font-size: 1.8rem;
+            margin: 0 12px;
+            transition: color 0.3s;
+        }
+        .construccion-page .social-links a:hover {
+            color: #fff;
+        }
+        .construccion-page .creditos {
+            margin-top: 50px;
+            font-size: 0.75rem;
+            color: #555;
+        }
+        .construccion-page .creditos a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .construccion-page .creditos a:hover {
+            color: #f1c40f;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Navegación -->
+    <!-- ============================================================
+         CONTENIDO ORIGINAL - COMENTADO TEMPORALMENTE
+    ===============================================================
+
     <header id="main-header">
         <div class="container">
             <div class="logo">
@@ -32,7 +109,6 @@
         </div>
     </header>
 
-    <!-- Sección Hero -->
     <section id="inicio" class="hero">
         <div class="hero-images"></div>
     </section>
@@ -41,7 +117,6 @@
         <a href="#contacto" class="btn btn-primary">Únete a la lucha</a>
     </div>
 
-    <!-- Sección Mestre (Nueva) -->
     <section id="mestre-intro" class="section-padding" style="background-color: #f8f8f8; border-bottom: 4px solid var(--yellow);">
         <div class="container">
             <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px;">
@@ -69,7 +144,6 @@
         </div>
     </section>
 
-    <!-- Sección Nosotros y Objetivos -->
     <section id="nosotros" class="section-padding">
         <div class="container">
             <div class="section-title animate-on-scroll fade-up">
@@ -100,7 +174,6 @@
                 </div>
             </div>
 
-            <!-- Actividades -->
             <div class="activities-box animate-on-scroll rotate-in">
                 <h3>Actividades Principales</h3>
                 <ul>
@@ -115,7 +188,6 @@
         </div>
     </section>
 
-    <!-- Sección Clases de Percusión (André) -->
     <section id="clases" class="section-dark section-padding">
         <div class="container">
             <div class="section-title animate-on-scroll fade-up">
@@ -177,7 +249,6 @@
         </div>
     </section>
 
-    <!-- Sección Eventos (Carrusel) -->
     <section id="eventos" class="section-padding">
         <div class="container">
             <div class="section-title animate-on-scroll fade-up">
@@ -187,7 +258,6 @@
 
             <div class="events-container">
                 
-                <!-- Evento 1: Roda de Timbau de Ramiro -->
                 <article class="event-row animate-on-scroll fade-up">
                     <div class="event-info">
                         <h3>Roda de Timbau de Ramiro</h3>
@@ -220,7 +290,6 @@
                     </div>
                 </article>
 
-                <!-- Evento 2: Homenaje a María Remedios del Valle -->
                 <article class="event-row animate-on-scroll fade-up">
                     <div class="event-info">
                         <h3>Homenaje a María Remedios del Valle</h3>
@@ -254,13 +323,12 @@
                     </div>
                 </article>
 
-                <!-- Evento 3: Mestre Neguinho do Samba -->
                 <article class="event-row animate-on-scroll fade-up">
                     <div class="event-info">
                         <h3>Paso a la Inmortalidad de Mestre Neguinho do Samba</h3>
                         <span class="date">31/10 - Día del Samba Reggae</span>
                         <div class="event-desc">
-                            <p>En este día especial, rendimos tributo al creador del Samba Reggae. Su legado vive en cada toque de tambor y en la alegría de nuestra música. Mestre Neguinho do Samba, ¡presente!</p>
+                            <p>En este día especial, rendimos tributo al creador del Samba Reggae. Su legado vive en cada toque de tambor y en la alegría de nuestra música. Mestre Neguinho do Samba, presente!</p>
                         </div>
                     </div>
                     
@@ -291,7 +359,6 @@
         </div>
     </section>
 
-    <!-- Sección Luthier / Antes y Después -->
     <section id="luthier" class="section-padding">
         <div class="container">
             <div class="section-title animate-on-scroll fade-up">
@@ -302,7 +369,6 @@
 
             <div class="shop-grid">
                 
-                <!-- Restauración 1: Agogos -->
                 <div class="shop-card luthier-card animate-on-scroll zoom-in">
                     <h3>Restauración de Agogós</h3>
                     <div class="before-after-container">
@@ -321,7 +387,6 @@
                     </div>
                 </div>
 
-                <!-- Restauración 2: Repinique -->
                 <div class="shop-card luthier-card animate-on-scroll zoom-in delay-100">
                     <h3>Restauración de Repinique</h3>
                     <div class="before-after-container">
@@ -340,7 +405,6 @@
                     </div>
                 </div>
 
-                <!-- Restauración 3: Tumbadora -->
                 <div class="shop-card luthier-card animate-on-scroll zoom-in delay-200">
                     <h3>Restauración de Tumbadora</h3>
                     <div class="before-after-container">
@@ -363,7 +427,6 @@
         </div>
     </section>
 
-    <!-- Sección Biografía -->
     <section id="biografia" class="section-padding" style="background-color: #f4f4f4;">
         <div class="container">
             <div class="section-title animate-on-scroll fade-up">
@@ -384,15 +447,15 @@
                     Desde el despertar de su conciencia, Andre Silva participa en varias clases de percusión afro (tambores) en el centro cultural llamado Casa do Olodum, en el Pelourinho.
                 </p>
                 <p style="margin-bottom: 20px;">
-                    Con 10 años viaja Porto Alegre (RS) por motivos familiares, donde conoce el babalorixá Luis Roberto do Couto Stemburgo, conocido como Pai Ydi d’Oxum Pandi, haciendo junto a él sus primeros inicios en el mundo del batuque no Rio Grande do Sul, ya que sus primeras iniciaciones fueron hechas en el Candomblé Nación en el año 1988. Hace su primer obligación y consagración religiosa en los tambores afros.
+                    Con 10 años viaja Porto Alegre (RS) por motivos familiares, donde conoce el babalorixá Luis Roberto do Couto Stemburgo, conocido como Pai Ydi d'Oxum Pandi, haciendo junto a él sus primeros inicios en el mundo del batuque no Rio Grande do Sul, ya que sus primeras iniciaciones fueron hechas en el Candomblé Nación en el año 1988. Hace su primer obligación y consagración religiosa en los tambores afros.
                 </p>
                 <p style="margin-bottom: 20px;">
-                    Al año siguiente, 1989, conoce su primer maestro de Ilú (tambor) Afro, Jorge Carvalho, más conocido como Jorge “Testa” de Ogum, fue quien enseñó los primeros pasos y toques, como: conocer el mundo del Ylú (tambor) Afro, conducir una obligación, los axés, fundamentos y rituales.
-                    Día 15 de octubre de 1989 debuta al lado de Jorge “Testa” como alabé donde tocó su primer batuque en la casa de Mãe Eufrazia de Oxum (Q.E.R.D), pasando los tiempos adquiriendo experiencia como alabé.
+                    Al año siguiente, 1989, conoce su primer maestro de Ilú (tambor) Afro, Jorge Carvalho, más conocido como Jorge "Testa" de Ogum, fue quien enseñó los primeros pasos y toques, como: conocer el mundo del Ylú (tambor) Afro, conducir una obligación, los axés, fundamentos y rituales.
+                    Día 15 de octubre de 1989 debuta al lado de Jorge "Testa" como alabé donde tocó su primer batuque en la casa de Mãe Eufrazia de Oxum (Q.E.R.D), pasando los tiempos adquiriendo experiencia como alabé.
                 </p>
                 <p style="margin-bottom: 40px;">
                     En 1990 tuvo su primera oportunidad fuera de la ciudad de Porto Alegre para tocar su primero contrato y batuque en la ciudad de Uruguaiana, en la casa de Pierre Duran, conocido como Pai Pierre de Oxum, donde tocó case cinco años en su ylé.
-                    En 1993 conoce su segundo amigo, compañero, ejemplo, Jorge Luis Vas (Mestre Chamin d’Agandjú), quien terminó de enseñar lo que hoy sabe, transmite André de Sangòjoba tocando y rezando para los orishas, también cantando.
+                    En 1993 conoce su segundo amigo, compañero, ejemplo, Jorge Luis Vas (Mestre Chamin d'Agandjú), quien terminó de enseñar lo que hoy sabe, transmite André de Sangòjoba tocando y rezando para los orishas, también cantando.
                 </p>
 
                 <h3 style="color: var(--black); margin-bottom: 20px; border-bottom: 2px solid var(--yellow); display: inline-block;">Introducción a la Percusión Afro</h3>
@@ -411,10 +474,10 @@
                         Una de las diferencias más marcadas que existen entre los Órisas y los santos católicos es que los santos católicos son espíritus de muertos ("egunes"), mientras que los Órisàs son seres superiores, creados por Dios mucho antes de la creación de los seres humanos. Son seres de luz e intermediarios entre:
                     </p>
                     <ul style="list-style-type: none; margin-left: 20px; margin-bottom: 20px;">
-                        <li><i class="fas fa-caret-right" style="color: var(--red);"></i> I – Dios (Olodumare) y los seres humanos.</li>
-                        <li><i class="fas fa-caret-right" style="color: var(--red);"></i> II – Los seres humanos y los espíritus malignos.</li>
-                        <li><i class="fas fa-caret-right" style="color: var(--red);"></i> III – Los seres humanos, los Àjogún (espíritus ejecutores).</li>
-                        <li><i class="fas fa-caret-right" style="color: var(--red);"></i> IV – Los seres muertos, su destino.</li>
+                        <li><i class="fas fa-caret-right" style="color: var(--red);"></i> I  Dios (Olodumare) y los seres humanos.</li>
+                        <li><i class="fas fa-caret-right" style="color: var(--red);"></i> II  Los seres humanos y los espíritus malignos.</li>
+                        <li><i class="fas fa-caret-right" style="color: var(--red);"></i> III  Los seres humanos, los Àjogún (espíritus ejecutores).</li>
+                        <li><i class="fas fa-caret-right" style="color: var(--red);"></i> IV  Los seres muertos, su destino.</li>
                     </ul>
                     <p>
                         El Orisàs que representan a Dios em la Tierra es Orisa-Nlá, y es el líder espiritual de todos los demás orisas ademas, es el òrisa de la sabedoria y de la adivinacion.
@@ -461,12 +524,11 @@
         </div>
     </section>
 
-    <!-- Footer / Contacto -->
     <section id="contacto" class="footer-section">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col animate-on-scroll fade-right pb-4">
-                    <h3>¿Quiénes pueden participar?</h3>
+                    <h3>Quiénes pueden participar?</h3>
                     <p>Orientado a toda persona que desee conocer la cultura afro y comprometerse con la responsabilidad asumida. **Los menores deben estar acompañados por un adulto responsable.**</p>
                 </div>
                 <div class="footer-col animate-on-scroll fade-left">
@@ -486,12 +548,10 @@
         </div>
     </section>
 
-    <!-- Botón Flotante WhatsApp -->
     <a href="https://wa.me/5491171703424" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Enviar mensaje por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Reproductor de Música Flotante -->
     <div class="music-player-container">
         <audio id="bg-music" loop>
             <source src="musicaasocacion.mp4" type="audio/mp4">
@@ -503,5 +563,17 @@
     </div>
 
     <script src="script.js"></script>
+
+    ================================================================
+         FIN CONTENIDO ORIGINAL
+    ============================================================= -->
+
+    <!-- PÁGINA EN CONSTRUCCIÓN -->
+    <div class="construccion-page">
+        <i class="fas fa-cog icon-construccion"></i>
+        <h1>Estamos en <span>Construcción</span></h1>
+        <p class="creditos">Developed and Designed by: <a href="https://www.gokywebs.net" target="_blank" rel="noopener noreferrer">Gokywebs.net</a></p>
+    </div>
+
 </body>
 </html>
